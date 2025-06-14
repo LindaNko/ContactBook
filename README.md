@@ -64,5 +64,5 @@ Navigates back to the `index.html` page.
 This project is licensed under the MIT License.
 
 ## Contact
-For any questions or issues, please contact [Your Name] at [Your Email].
+For any questions or issues, please contact [Linda] at [lindanko63@outlook.com].
 
