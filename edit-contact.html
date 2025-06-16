@@ -34,11 +34,23 @@
             var id= getId();
             console.log("The is is:"+id);
 
+            //calls contact and stores in id
             function getId(){
                 var url = window.location.href;
                 var pos = url.search("=");
                 var id = url.slice(pos+1);
                 return id;
+            }
+
+            function getContact(){
+                fetch(rootPath + 'controller/get-contacts/?id=' + id)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    //display contact info
+                    console.log(data)
+                })
             }
         </script>
 
