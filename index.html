@@ -5,6 +5,8 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         
     </head>
+
+    <header><h3>Contact Book</h3></header>
     <body onload="fetchContacts()">
         <div id="table">Contacts Loading...</div>
         <button id="refresh" type="button">Refresh</button>
@@ -33,10 +35,13 @@
 
                 for(let a in data){
                     output += `
-                    <tr>
+                    <tr onclick="editContact(${data[a].id})" >
                         <td><img src="${rootPath}controller/uploads/${data[a].avatar}" width="40" alt="Avatar"/></td>
                         <td><h5>${data[a].firstname}</h5></td>
                         <td><h5>${data[a].lastname}</h5></td>
+                        <td><h5>${data[a].mobile}</h5></td>
+                        <td><h5>${data[a].email}</h5></td>
+
                     </tr>`;
                 }
 
@@ -46,6 +51,10 @@
 
            function addContact(){
             window.open("add-contact.html", "_self");
+           }
+
+           function editContact(id){
+            window.open("edit-contact.html?id="+id, "_self")
            }
         </script>
        
